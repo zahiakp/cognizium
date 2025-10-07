@@ -1,5 +1,6 @@
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import { rgb } from "../../app/data/branding";
 
 export const generatePDF = (
   participants: any[],
@@ -65,7 +66,7 @@ export const generatePDF = (
     margin: { bottom: footerGap },
     theme: "grid",
     styles: { fontSize: 11, cellPadding: 3.5 },
-    headStyles: { fillColor: [33, 122, 74] },
+    headStyles: { fillColor: rgb||[33, 122, 74] },
     columnStyles: {
       1: { fontStyle: "bold" },
       4: { fontStyle: "bold" },

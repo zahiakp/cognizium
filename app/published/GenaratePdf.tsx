@@ -1,5 +1,6 @@
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import { rgb } from "../data/branding";
 
 export const generatePDF = 
   (result: any[],programs:any
@@ -53,7 +54,7 @@ doc.addImage(templateBackground, 'JPEG', 0, 0, pageWidth, pageHeight, undefined,
     startY: 88, // Start the table below the program name and category (adjust as needed)
     theme: "grid", // Options: "striped", "grid", "plain"
     styles: { fontSize: 11, cellPadding: 3 },
-    headStyles: { fillColor: [100, 100, 100] }, // Custom header colors
+    headStyles: { fillColor: rgb||[100, 100, 100] }, // Custom header colors
     // columnStyles: {
     //   1: { // Column 2 (Name)
     //     fontStyle: "bold", // Set the "Name" column to bold

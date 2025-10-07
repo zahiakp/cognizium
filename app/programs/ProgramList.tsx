@@ -275,17 +275,7 @@ const statusOptions = [allProgramsOption, ...categoryOptions];
   };
   const campCategories = cookies?.access?.categories
   const campCategoriesVal = cookies?.access?.categories
-const statusTheme:any ={
-  pending : "text-red-500",
-  reporting : "text-primary-500",
-  ongoing: "text-blue-500",
-  finished:"text-green-500",
-  judged:"text-violet-500",
-  announced:"text-blue-500",
-  awarded:"text-green-500",
-  default : "text-gary-500"
-  
-}
+
 
 const renderContent = () => {
         if (loading) {
@@ -626,3 +616,16 @@ const renderContent = () => {
 }
 
 export default ProgramList;
+
+
+export const statusTheme:any ={
+  pending : "text-red-500",
+  reporting : "text-primary-500",
+  ongoing: "text-blue-500",
+  finished:"text-green-500",
+  judged:"text-violet-500",
+  announced:"text-blue-500",
+  awarded:"text-green-500",
+  default : "text-gary-500"
+  
+}

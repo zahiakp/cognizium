@@ -1,5 +1,6 @@
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import { rgb } from "../data/branding";
 
 export const generatePDF = (data: any[], campus: string): Blob => {
   const doc = new jsPDF();
@@ -83,7 +84,7 @@ export const generatePDF = (data: any[], campus: string): Blob => {
       startY: startY + 15, // Start the table below the category header with some gap
       theme: "grid", // Options: "striped", "grid", "plain"
       styles: { fontSize: 10, cellPadding: 4 },
-      headStyles: { fillColor: [220, 38, 38] }, // Custom header colors
+      headStyles: { fillColor: rgb||[220, 38, 38] }, // Custom header colors
       columnStyles: {
         0: { // Program column
           fontStyle: "bold", // Set the "Program" column to bold

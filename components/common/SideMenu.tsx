@@ -101,7 +101,7 @@ const SideMenu = () => {
       icon: <IconCertificate />,
       adminOnly: true,
       awardOnly: true,
-      resultOnly: true,
+      // resultOnly: true,
     },
     {
       path: "/config",

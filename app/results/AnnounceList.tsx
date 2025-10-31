@@ -57,7 +57,7 @@ function AnnounceList() {
     } else {
       return [
         { label: "Program Results", value: "program" },
-        { label: "Team Points", value: "campus" },
+        // { label: "Team Points", value: "campus" },
       ];
     }
   }, [user.role]);

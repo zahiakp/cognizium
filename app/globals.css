@@ -58,7 +58,15 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Fractul-Medium";
+  src: url("/fonts/Fractul-Medium.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+.font-Fractul-medium {
+  font-family: "Fractul-Medium", serif;
+}
 /* Usage example */
 .font-Jazri-line {
   font-family: "FSL-Jazri-line", sans-serif;

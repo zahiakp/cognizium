@@ -262,7 +262,7 @@ const fetchResultbyProgams = async (program: any) => {
                                         >
                                             <BsStars /> Poster
                                         </button>
-                                        <button
+                                        {userRole=="admin"&& <><button
                                             onClick={() => fetchResultbyProgams(program)}
                                             className="p-2 rounded-lg gap-2 px-3 pr-4 text-white flex items-center bg-gradient-to-r from-green-500 to-emerald-600"
                                         >
@@ -273,7 +273,7 @@ const fetchResultbyProgams = async (program: any) => {
                               onClick={() => {setDownloading(program.id); handleDownload(program)}}
                             >
                              {downloading == program.id ? <span className="text-lg">••</span> : <IconDownload2 />}
-                            </button>
+                            </button></>}
                                     </td>
                                 </tr>
                             ))}

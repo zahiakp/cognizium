@@ -137,7 +137,7 @@ export async function getProgramswithPagination(quary:any) {
 
 
   export async function getAwardDetails(quary:any) {
-    const URL: string = `${ROOT_URL}programs/action.php?action=getAwardDetails&${quary}&status=announced`;
+    const URL: string = `${ROOT_URL}programs/action.php?action=getAwardDetails&${quary}`;
     
     try {
       const response = await axios.get(URL);

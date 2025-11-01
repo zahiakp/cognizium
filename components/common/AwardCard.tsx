@@ -1,10 +1,8 @@
-"use client";
-import React, { useEffect, useState } from "react";
+"use client";;
+import { useState } from "react";
 import Modal from "./Modal";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/navigation";
-import DeleteParticipant from "../../app/programs/DeletePart";
-import IconMaximizeSquare from "../icon/icon-maximize-square";
 import { showMessage } from "./CusToast";
 import { MarkAwarded } from "../../app/judgement/func";
 
@@ -16,19 +14,21 @@ function AwardCard({ close,program, fetchPrograms }: { close: any; program:any ,
   const campus = cookies.access?.campusId;
   const [loading, setLoading] = useState(false);
   const [deleteItem,setDeleteItem] = useState<any>()
-  // const [students, setStudents] = useState<any>([]);
-  // const [participants, setParticipants] = useState<any>([]);
+  
+  console.log(program);
+  
+
   const [userRole, setUserRole] = useState();
   
    const markAwarded = async (id:any) => {
        setLoading(true);
    
        try {
-         // Updating all participants' marks in a batch
+         
          const result = await MarkAwarded(id,'awarded');
       if(result){
     showMessage("student awarded successfully.", "success");
-    // router.refresh()
+    
     fetchPrograms()
     close(false);
    }else{
@@ -52,6 +52,7 @@ function AwardCard({ close,program, fetchPrograms }: { close: any; program:any ,
                           <thead>
                             <tr>
                               <th>Rank</th>
+                              <th>Grade</th>
                               <th>Name</th>
                               <th>campus</th>
                               <th></th>
@@ -61,6 +62,7 @@ function AwardCard({ close,program, fetchPrograms }: { close: any; program:any ,
                             {program.results.map((item: any, index: number) => (
                                  <tr key={index} className="grid-cols-6">
                                  <th>{item.rank}</th>
+                                 <th>{item.grade}</th>
                                  <td className="col-span-2">{item.studentname?.toUpperCase()}</td>
                                  <td className="font-bold col-span-2">{item.campusname?.toUpperCase()}                              </td>
                                  <td>

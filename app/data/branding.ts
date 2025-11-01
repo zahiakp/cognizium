@@ -1,4 +1,4 @@
-export const brandName = "test"
+export const brandName = "Cognizium"
 export const brandLogo = "/Cog Logo.png"
 export const categoryMap: Record<string, string> = {
   hizone: "Hi Zone",

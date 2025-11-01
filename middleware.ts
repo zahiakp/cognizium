@@ -63,7 +63,7 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/unauthorized", request.url));
     }
 
-    if (pathname.startsWith("/programs") && role !== "admin") {
+    if (pathname.startsWith("/programs") && role !== "admin" && role !== "campus") {
       return NextResponse.redirect(new URL("/unauthorized", request.url));
     }
 
